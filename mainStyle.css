@@ -8,41 +8,9 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-
     background-clip: border-box;
     background-origin: padding-box;
-
     box-sizing: border-box;
-}
-
-.menu {
-    float: left;
-    width: 20%;
-    text-align: center;
-}
-
-.menu a {
-    background-color: #e5e5e5;
-    padding: 8px;
-    margin-top: 7px;
-    display: block;
-    width: 100%;
-    color: black;
-}
-
-.main {
-    float: left;
-    width: 60%;
-    padding: 20px 20px;
-}
-
-.right {
-    background-color: #e5e5e5;
-    float: left;
-    width: 20%;
-    padding: 15px;
-    margin-top: 7px;
-    text-align: center;
 }
 
 .footer {
@@ -50,38 +18,52 @@ body {
     color: white;
     padding: 15px;
 }
+ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #333;
+}
 
+li {
+    float: left;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+            background-color: #111;
+        }
+
+/*
 @media only screen and (max-width: 640px) {
-    /*
-        For mobile phones
-    */
     .menu, .main, .right {
         width: 100%;
     }
-
 }
+*/
 
 #app {
     width: 640px;
     height: 1136px;
-    
     background-color: white;
     border: 5px solid black;
-
     text-align: center;
-
     margin: 10% 10%;
     padding: 15px;
-
 }
 
 #qrcode {
     margin: 10% 10%;
     padding: 10px;
-
     text-align: center;
     justify-content: center;
-
-
 }
-        
