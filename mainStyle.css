@@ -12,8 +12,6 @@ body {
     background-clip: border-box;
     background-origin: padding-box;
 
-    color: white;
-
     box-sizing: border-box;
 }
 
@@ -35,7 +33,7 @@ body {
 .main {
     float: left;
     width: 60%;
-    padding: 0 20px;
+    padding: 20px 20px;
 }
 
 .right {
@@ -47,7 +45,13 @@ body {
     text-align: center;
 }
 
-@media only screen and (max-width: 620px) {
+.footer {
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+@media only screen and (max-width: 640px) {
     /*
         For mobile phones
     */
@@ -57,12 +61,23 @@ body {
 
 }
 
+#app {
+    width: 640px;
+    height: 1136px;
+    background-color: white;
+    text-align: center;
+
+    margin: 5%;
+
+}
+
 #qrcode {
-    width: 160px;
-    height: 160px;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 15px;
     margin-right: 15px;
+
+    text-align: center;
+
 }
         
