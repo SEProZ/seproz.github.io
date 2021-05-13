@@ -17,10 +17,9 @@
     <script type="text/javascript" src="qrcode.js"></script> <!-- QR Code Script-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Google CDN JQuery-->
-    <!-- Chat Bubble bootstrap stuff-->
+    <!-- Chat Bubble bootstrap stuff
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
     <!--
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
@@ -35,10 +34,10 @@
         <div>
 
             <ul class="topnav">
-                <li><a class="active" href="#Messages">Messages</a></li>
-                <li><a href="#Location">Location</a></li>
-                <li><a href="#Groups">Groups</a></li>
-                <li class="right"><a href="#QR Code">QR Code</a></li>
+                <li><a class="active" href="#Messages" onclick="toggleMessages()">Messages</a></li>
+                <li><a href="#Location" onclick="toggleLocation()">Location</a></li>
+                <li><a href="#Groups" onclick="toggleGroups()">Groups</a></li>
+                <li class="right"><a href="#QR Code" onclick="toggleQRCode()">QR Code</a></li>
             </ul>
 
             <div class="main">
@@ -82,7 +81,7 @@
 
                 <div class="container">
 
-                    <div class="messaging">
+                    <div class="messaging" id="messaging">
                         <div class="inbox_msg">
 
                             <div class="mesgs">
@@ -98,8 +97,8 @@
                                     </div>
                                     <div class="outgoing_msg">
                                         <div class="sent_msg">
-                                            <p>To the chick with the bunny earrings. Meet me at the bar ;)</p>
-                                            <span class="time_date"> 11:01 AM    |    June 9</span>
+                                            <p>To the chick with the bunny earrings. Meet me at the bar?</p>
+                                            <span class="time_date"> 9:23 PM    |    Today</span>
                                         </div>
                                     </div>
                                     <div class="incoming_msg">
@@ -107,14 +106,14 @@
                                         <div class="received_msg">
                                             <div class="received_withd_msg">
                                                 <p>No way, Moby is here!</p>
-                                                <span class="time_date"> 11:01 AM    |    Yesterday</span>
+                                                <span class="time_date"> 9:25 PM    |    Today</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="outgoing_msg">
                                         <div class="sent_msg">
                                             <p>Where's the bar?</p>
-                                            <span class="time_date"> 11:01 AM    |    Today</span>
+                                            <span class="time_date"> 9:31 PM    |    Today</span>
                                         </div>
                                     </div>
                                     <div class="incoming_msg">
@@ -122,9 +121,9 @@
                                         <div class="received_msg">
                                             <div class="received_withd_msg">
                                                 <p>
-                                                    Just got 2 beers for the price of one. Awesome.
+                                                    Just got 2 beers for the price of one. I know the secret password!
                                                 </p>
-                                                <span class="time_date"> 11:01 AM    |    Today</span>
+                                                <span class="time_date"> 9:41 PM    |    Today</span>
                                             </div>
                                         </div>
                                     </div>
@@ -143,6 +142,7 @@
 
     </div>
 
+    <!--
     <div class="footer">
         <h2>Contact</h2>
 
@@ -156,7 +156,7 @@
 
         <p>Special Event ProZ is your go-to greater Los Angeles Area DJ and Event Planning Service</p>
 
-    </div>
+    </div> -->
 
     <script>
 
@@ -168,6 +168,50 @@
             colorLight: "#ffffff",
             correctLevel: QRCode.CorrectLevel.H
         });
+
+        function toggleMessages() {
+            var x = document.getElementById("messaging");
+
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+
+        };
+
+        function toggleLocation() {
+            var x = document.getElementById("messaging");
+
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+
+        };
+
+        function toggleGroups() {
+            var x = document.getElementById("messaging");
+
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+
+        };
+
+        function toggleQRCode() {
+            var x = document.getElementById("messaging");
+
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+
+        };
 
     </script>
 
