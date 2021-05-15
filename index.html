@@ -1,219 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <title>Special Event ProZ GitHub Page</title>
+
     <meta charset="UTF-8" />
     <meta name="author" content="Erin Vasquez" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="page2style.css" />
+
+    <title>SeProZ</title>
+
     <meta name="description" content="Special Event ProZ professional website." />
-    <meta name="revised" content="Erin Vasquez, 5/11/2021" />
-
-    <meta http-equiv="Content-Script-Type" content="text/JavaScript" />
-
-    <link rel="stylesheet" href="mainStyle.css">
-
-    <!--
-    <script type="text/javascript" src="jquery.min.js"></script> <!-- JQuery that QR Code depends on-->
-    <script type="text/javascript" src="qrcode.js"></script> <!-- QR Code Script-->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Google CDN JQuery-->
-    <!-- Chat Bubble bootstrap stuff
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
-    <!--
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+    <meta name="revised" content="Erin Vasquez, 5/14/2021" />
 
 </head>
 
 <body>
 
-    <div id="app">
-
-        <div>
-
-            <ul class="topnav">
-                <li><a class="active" href="#Messages" onclick="toggleMessages()">Messages</a></li>
-                <li><a href="#Location" onclick="toggleLocation()">Location</a></li>
-                <li><a href="#Groups" onclick="toggleGroups()">Groups</a></li>
-                <li class="right"><a href="#QR Code" onclick="toggleQRCode()">QR Code</a></li>
-            </ul>
-
-            <div class="main">
-
-                <input id="text" type="text" value="seproz.github.io" style="width:80%" /><br />
-                <div id="qrcode" style="width:100px; height:100px;"></div>
-
-                <script type="text/javascript">
-                    var qrcode = new QRCode(document.getElementById("qrcode"), {
-                        width: 100,
-                        height: 100
-                    });
-
-                    function makeCode() {
-                        var elText = document.getElementById("text");
-
-                        if (!elText.value) {
-                            alert("Input a text");
-                            elText.focus();
-                            return;
-                        }
-
-                        qrcode.makeCode(elText.value);
-                    }
-
-                    makeCode();
-
-                    $("#text").
-                        on("blur", function () {
-                            makeCode();
-                        }).
-                        on("keydown", function (e) {
-                            if (e.keyCode == 13) {
-                                makeCode();
-                            }
-                        });
-                </script>
+    <!--
 
 
-                <!-- Begin chat box div -->
 
-                <div class="container">
+    -->
+    <!---
+    <div id="splash">
+    <img src="img/logo.png" alt="" class="logo" />
+    </div>
+    -->
 
-                    <div class="messaging" id="messaging">
-                        <div class="inbox_msg">
+    <div class="content">
 
-                            <div class="mesgs">
-                                <div class="msg_history">
-                                    <div class="incoming_msg">
-                                        <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                        <div class="received_msg">
-                                            <div class="received_withd_msg">
-                                                <p>Bartender is here, everyone quick!</p>
-                                                <span class="time_date"> 11:01 AM    |    June 9</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="outgoing_msg">
-                                        <div class="sent_msg">
-                                            <p>To the chick with the bunny earrings. Meet me at the bar?</p>
-                                            <span class="time_date"> 9:23 PM    |    Today</span>
-                                        </div>
-                                    </div>
-                                    <div class="incoming_msg">
-                                        <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                        <div class="received_msg">
-                                            <div class="received_withd_msg">
-                                                <p>No way, Moby is here!</p>
-                                                <span class="time_date"> 9:25 PM    |    Today</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="outgoing_msg">
-                                        <div class="sent_msg">
-                                            <p>Where's the bar?</p>
-                                            <span class="time_date"> 9:31 PM    |    Today</span>
-                                        </div>
-                                    </div>
-                                    <div class="incoming_msg">
-                                        <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                        <div class="received_msg">
-                                            <div class="received_withd_msg">
-                                                <p>
-                                                    Just got 2 beers for the price of one. I know the secret password!
-                                                </p>
-                                                <span class="time_date"> 9:41 PM    |    Today</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+        <header class="app-header">
+            <div class="container">
+                <img src="img/logo.png" alt="" class="logo" />
+                <input type="text" class="search"
+                       placeholder="Search..." />
+            </div>
+        </header>
 
-                            </div>
-                        </div>
+        <div class="subheader">
+            <div>
+                <p>Your special event ProZ!</p>
+                <p>Book us now <i class="fa fa-chevron-right"></i></p>
+            </div>
 
-                    </div>
+            <img src="img/mainimg1.png" alt="" />
 
-                </div>
+        </div>
 
+        <div class="grid container">
+
+            <div class="item">
+                <h4>Messages</h4>
+                <p>See what everyone's saying.</p>
+
+                <img src="images/img1.png" alt="A stock photo." />
+
+            </div>
+
+            <div class="item">
+                <h4>Location</h4>
+                <p>See where everyone is</p>
+
+                <img src="images/img2.png" alt="A stock photo." />
+            </div>
+
+            <div class="item">
+                <h4>Friends</h4>
+                <p>See what your friends are up to.</p>
+
+                <img src="images/img3.png" alt="A stock photo." />
+            </div>
+
+            <div class="item">
+                <h4>QR Code</h4>
+                <p>See what everyone's saying.</p>
+
+                <img src="images/img4.png" alt="A stock photo." />
+            </div>
+
+            <div class="item">
+                <h4>QR Code</h4>
+                <p>See what everyone's saying.</p>
+
+                <img src="images/img5.png" alt="A stock photo." />
+            </div>
+
+            <div class="item">
+                <h4>Settings</h4>
+                <p>See what everyone's saying.</p>
+
+                <img src="images/img6.png" alt="A stock photo." />
             </div>
 
         </div>
 
     </div>
 
-    <!--
-    <div class="footer">
-        <h2>Contact</h2>
+    <footer class="app-footer">
+        <ul>
 
-        <div class="footerContactInfo" id="contact">
-            <p>
-                <b>SpecialEventProz</b><br>
-                e-mail: michael@seproz.com<br>
-                telephone: 818-305-6633
-            </p>
-        </div>
+            <li>
+                <i class="fa fa-heart"></i>
+                Home
+            </li>
 
-        <p>Special Event ProZ is your go-to greater Los Angeles Area DJ and Event Planning Service</p>
+            <li>
+                <i class="fa fa-barcode"></i>
+                Show Card
+            </li>
 
-    </div> -->
+            <li>
+                <i class="fa fa-user"></i>
+                Account
+            </li>
 
-    <script>
+            <li>
+                <i class="fa fa-map-marker"></i>
+                Find
+            </li>
 
-        var qrcode = new QRCode("test", {
-            text: "https://seproz.com/",
-            width: 128,
-            height: 128,
-            colorDark: "#000000",
-            colorLight: "#ffffff",
-            correctLevel: QRCode.CorrectLevel.H
-        });
 
-        function toggleMessages() {
-            var x = document.getElementById("messaging");
 
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
+        </ul>
 
-        };
-
-        function toggleLocation() {
-            var x = document.getElementById("messaging");
-
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-
-        };
-
-        function toggleGroups() {
-            var x = document.getElementById("messaging");
-
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-
-        };
-
-        function toggleQRCode() {
-            var x = document.getElementById("messaging");
-
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-
-        };
-
-    </script>
+    </footer>
 
 </body>
 

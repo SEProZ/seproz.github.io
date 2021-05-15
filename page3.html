@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Special Event ProZ GitHub Page</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Erin Vasquez" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Special Event ProZ professional website." />
+    <meta name="revised" content="Erin Vasquez, 5/11/2021" />
+
+    <meta http-equiv="Content-Script-Type" content="text/JavaScript" />
+
+    <link rel="stylesheet" href="mainStyle.css">
+
+    <!--
+    <script type="text/javascript" src="jquery.min.js"></script> <!-- JQuery that QR Code depends on-->
+    <script type="text/javascript" src="qrcode.js"></script> <!-- QR Code Script-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Google CDN JQuery-->
+    <!-- Chat Bubble bootstrap stuff
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+    <!--
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="app">
+
+
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'messageDiv')">Messages</button>
+                <button class="tablinks" onclick="openCity(event, 'locationDiv')">Location</button>
+                <button class="tablinks" onclick="openCity(event, 'groupsDiv')">Groups</button>
+                <button class="tablinks" onclick="openCity(event, 'qrDiv')">QR Code</button>
+            </div>
+
+            <div class="main">
+
+
+                <!-- Begin chat box div -->
+
+                <div class="container">
+
+                    <div class="tabcontent">
+
+                        <div class="messaging">
+                            <div class="inbox_msg">
+
+                                <div class="mesgs">
+                                    <div class="msg_history">
+                                        <div class="incoming_msg">
+                                            <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                            <div class="received_msg">
+                                                <div class="received_withd_msg">
+                                                    <p>Bartender is here, everyone quick!</p>
+                                                    <span class="time_date"> 11:01 AM    |    June 9</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="outgoing_msg">
+                                            <div class="sent_msg">
+                                                <p>To the chick with the bunny earrings. Meet me at the bar?</p>
+                                                <span class="time_date"> 9:23 PM    |    Today</span>
+                                            </div>
+                                        </div>
+                                        <div class="incoming_msg">
+                                            <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                            <div class="received_msg">
+                                                <div class="received_withd_msg">
+                                                    <p>No way, Moby is here!</p>
+                                                    <span class="time_date"> 9:25 PM    |    Today</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="outgoing_msg">
+                                            <div class="sent_msg">
+                                                <p>Where's the bar?</p>
+                                                <span class="time_date"> 9:31 PM    |    Today</span>
+                                            </div>
+                                        </div>
+                                        <div class="incoming_msg">
+                                            <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                            <div class="received_msg">
+                                                <div class="received_withd_msg">
+                                                    <p>
+                                                        Just got 2 beers for the price of one. I know the secret password!
+                                                    </p>
+                                                    <span class="time_date"> 9:41 PM    |    Today</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div id="locationDiv" class="tabcontent"><p>Location Here</p></div>
+
+                    <div id="groupDiv" class="tabcontent"><p>Groups Here</p></div>
+
+                    <div id="qrcodeDiv" class="tabcontent">
+
+                        <script type="text/javascript">
+                            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                                width: 100,
+                                height: 100
+                            });
+
+                            function makeCode() {
+                                var elText = document.getElementById("text");
+
+                                if (!elText.value) {
+                                    alert("Input a text");
+                                    elText.focus();
+                                    return;
+                                }
+
+                                qrcode.makeCode(elText.value);
+                            }
+
+                            makeCode();
+
+                            $("#text").
+                                on("blur", function () {
+                                    makeCode();
+                                }).
+                                on("keydown", function (e) {
+                                    if (e.keyCode == 13) {
+                                        makeCode();
+                                    }
+                                });
+                        </script>
+
+                        <input id="text" type="text" value="seproz.github.io" style="width:80%" /><br />
+                        <div id="qrcode" style="width:100px; height:100px;"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+    </div>
+
+    <!--
+    <div class="footer">
+        <h2>Contact</h2>
+
+        <div class="footerContactInfo" id="contact">
+            <p>
+                <b>SpecialEventProz</b><br>
+                e-mail: michael@seproz.com<br>
+                telephone: 818-305-6633
+            </p>
+        </div>
+
+        <p>Special Event ProZ is your go-to greater Los Angeles Area DJ and Event Planning Service</p>
+
+    </div> -->
+
+    <script>
+
+        var messageDiv = document.getElementById("messaging");
+        var locationDiv = document.getElementById("location");
+        var groupsDiv = document.getElementById("groups");
+        var qrDiv = document.getElementById("qrcodediv");
+
+
+        var qrcode = new QRCode("test", {
+            text: "https://seproz.com/",
+            width: 128,
+            height: 128,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+
+
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+
+            evt.currentTarget.classname += " active";
+
+        };
+
+        function toggleMessages() {
+
+            if (messageDiv.style.display === "none") {
+
+                messageDiv.style.display = "block";
+
+                qrDiv.style.display = "none";
+                locationDiv.style.display = "none";
+                groupsDiv.style.display = "none";
+
+
+            } else {
+
+                /*
+                messageDiv.style.display = "none";
+                */
+
+            }
+
+        };
+
+        function toggleLocation() {
+
+            if (locationDiv.style.display === "none") {
+
+                locationDiv.style.display = "block";
+
+                messageDiv.style.display = "none";
+                qrDiv.style.display = "none";
+                groupsDiv.style.display = "none";
+
+
+            } else {
+                /*
+                qrDiv.style.display = "none";
+                */
+            }
+
+        };
+
+        function toggleGroups() {
+
+            if (groupsDiv.style.display === "none") {
+                groupsDiv.style.display = "block";
+
+                messageDiv.style.display = "none";
+                locationDiv.style.display = "none";
+                qrDiv.style.display = "none";
+
+            } else {
+                /*
+                groupsDiv.style.display = "none";
+                */
+
+            }
+
+        };
+
+        function toggleQRCode() {
+
+            if (qrDiv.style.display === "none") {
+                qrDiv.style.display = "block";
+
+                messageDiv.style.display = "none";
+                locationDiv.style.display = "none";
+                groupsDiv.style.display = "none";
+
+            } else {
+
+                /*
+                qrDiv.style.display = "none";
+                */
+            }
+
+        };
+
+    </script>
+
+</body>
+
+</html>

@@ -198,13 +198,10 @@ img {
 
 }
 
-#messaging {
-    display: none;
-}
+/*
+    Messaging div shown by default
+*/
 
-.container {
-    margin-bottom: 0px;
-}
 
 .msg_history {
     max-height: 500px;
@@ -223,6 +220,7 @@ img {
     padding: 15px;
     width: auto;
 }
+
 ul {
     list-style-type: none;
     margin: 5px;
