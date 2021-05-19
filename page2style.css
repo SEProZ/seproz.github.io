@@ -13,13 +13,17 @@
 html,
 body {
     height: 100%;
+
+    font-weight: 900;
+
 }
 
 body {
+    /*
     font-family: Roboto, sans-serif;
+        */
     display: flex;
     flex-direction: column;
-
 }
 
 .content {
