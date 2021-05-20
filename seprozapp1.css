@@ -63,6 +63,12 @@ body {
     border-radius: 3px;
 }
 
+/*
+
+    Subheader
+
+*/
+
 .subheader {
     background-color: var(--secondary-color);
     color: #fff;
@@ -83,6 +89,12 @@ body {
 .subheader img {
     width: 40px;
 }
+
+/*
+
+    Grid
+
+*/
 
 .grid {
     display: grid;
