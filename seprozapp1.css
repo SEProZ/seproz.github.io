@@ -111,6 +111,13 @@ body {
 
 }
 
+.grid .item:hover {
+
+    color: white;
+    background-color: var(--primary-color);
+
+}
+
 .grid .item h3 {
     margin-bottom: 5px;
 }
@@ -122,10 +129,17 @@ body {
     margin-bottom: 20px;
 }
 
+/*
+.grid .item p:hover {
+    color: white;
+}*/
+
 .grid .item img {
     width: 30px;
     align-self: flex-end;
 }
+
+
 
 .app-footer {
     flex-shrink: 0;
@@ -152,6 +166,7 @@ body {
 .app-footer ul li i {
     font-size: 22px;
 }
+
 
 /* Splash */
 #splash {
