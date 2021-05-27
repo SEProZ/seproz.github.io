@@ -2,22 +2,23 @@
 <html lang="en">
 <head>
 
-    <title>Special Event ProZ GitHub Page</title>
+    <title>SEProZ App - QR Code</title>
 
     <meta charset="UTF-8" />
     <meta name="author" content="Erin Vasquez" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <!-- QR Code script dependency-->
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="qrcode.js"></script>
 
-    <!--
+    <!-- I don't know why this didn't work
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
     -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="seprozindex.css" />
+    <link rel="stylesheet" href="seprozapp1.css" />
 
     <title>SeProZ</title>
 
@@ -35,32 +36,67 @@
         <img src="images/SEPRoz_Logo.png" alt="" class="logo" />
     </div>
 
-    <!--
-        Regular page content
-    -->
-
     <div class="content">
 
         <header class="app-header">
             <div class="container">
                 <img src="images/SEPRoz_Logo.png" alt="" class="logo" />
+                <input type="text" class="search"
+                       placeholder="Search..." />
             </div>
         </header>
 
-        <div class="vertical-center">
-            <button class="btn toApp" onclick="window.location.href = './seprozapp1.html';">Go to App</button>
+        <div class="subheader">
+            <div>
+                <p>Your Special Event ProZ!</p>
+                <p>Book us now <i class="fa fa-chevron-right"></i></p>
+            </div>
 
+            <img src="images/SEPRoz_Logo.png" alt="" />
 
         </div>
 
-
+        <div id="qrcode"></div>
+        <script type="text/javascript">
+            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                text: "http://jindo.dev.naver.com/collie",
+                width: 128,
+                height: 128,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        </script>
 
     </div>
 
     <footer class="app-footer">
+        <ul>
 
-        <p>Special Event ProZ.</p>
-        
+            <li>
+                <i class="fa fa-heart"></i>
+                Home
+            </li>
+
+            <li>
+                <i class="fa fa-barcode"></i>
+                Show Card
+            </li>
+
+            <li>
+                <i class="fa fa-user"></i>
+                Account
+            </li>
+
+            <li>
+                <i class="fa fa-map-marker"></i>
+                Find
+            </li>
+
+
+
+        </ul>
+
     </footer>
 
     <script>
